@@ -10,8 +10,8 @@ def guess():
     while True:
         guess = int((max - min) / 2 + min)
         print(f"Your number is {guess}")
-        user_input = input()
-        correct_answers = ["You win", "To big", "To small"]
+        user_input = input().lower()
+        correct_answers = ["you win", "to big", "to small"]
         if user_input in correct_answers:
             if user_input == "You win":
                 print("Hurra! I guess")
@@ -23,7 +23,8 @@ def guess():
         else:
             print("Wrong answer")
 
-guess()
+if __name__ == '__main__':
+    guess()
 
 
 
